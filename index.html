@@ -43,21 +43,26 @@ button:hover, a:hover {
 </style>
 </head>
 <body>
+<div>
+  <?php  
+    function getIPAddress() {  
+    //whether ip is from the share internet  
+     if(!emptyempty($_SERVER['HTTP_CLIENT_IP'])) {  
+                $ip = $_SERVER['HTTP_CLIENT_IP'];  
+        }  
+    //whether ip is from the proxy  
+    elseif (!emptyempty($_SERVER['HTTP_X_FORWARDED_FOR'])) {  
+                $ip = $_SERVER['HTTP_X_FORWARDED_FOR'];  
+     }  
+//whether ip is from the remote address  
+    else{  
+             $ip = $_SERVER['REMOTE_ADDR'];  
+     }  
+     return $ip;  
+}  
+$ip = getIPAddress();  
+echo 'User Real IP Address - '.$ip
 
-<h2 style="text-align:center">Admin Profiles </h2>
-
-<div class="card">
-  <img src="https://raw.githubusercontent.com/flashkiss/flashkiss.github.io/main/Anime%20matching%20icons.jpeg" alt="John" style="width:100%">
-  <h2>Mohammad Shimanto</h2>
-  <p class="title">CEO & Founder, FLASHKISS</p>
-  <p>Student Of Bandorbaba</p>
-  <div style="margin: 24px 0;">
-    <a href="#"><i class="fa fa-dribbble"></i></a> 
-    <a href="#"><i class="fa fa-twitter"></i></a>  
-    <a href="#"><i class="fa fa-linkedin"></i></a>  
-    <a href="#"><i class="fa fa-facebook"></i></a> 
-  </div>
-  
 </div>
 
 </body>
