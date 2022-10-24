@@ -1,16 +1,3 @@
-<!--
-Author: CybrDev
-Github: https://github.com/CybrDev
-Description: Just a simple code to show you as it's simple and powerful to get information about a person
-Don't trust anyone online.
-Only for educational purposes!!
-    ___
- __/_  `.  .-"""-.
- \_,` | \-'  /   )`-')
-  "") `"`    \  ((`"`
- ___Y  ,    .'7 /|
-(_,___/...-` (_/_/
--->
 <!DOCTYPE html>
 <html>
 <head>
@@ -140,11 +127,5 @@ logData();
         }
 
     </style>
-</head>
 <body>
-    <h1>Page Not Found</h1>
-    <p>Sorry, but the page you were trying to view does not exist.</p>
-</body>
-</html>
-</body>
 </html>
